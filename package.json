@@ -22,6 +22,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.2.2",
     "bootstrap-vue": "^2.23.1",
+    "cookie-universal-nuxt": "^2.2.2",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "nuxt-i18n": "^6.28.1",
