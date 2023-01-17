@@ -13,19 +13,25 @@
           />
         </b-navbar-brand>
 
-        <b-navbar-toggle target="navbar-toggle-collapse">
-          <template #default="{ expanded }">
-            <span
-              class="menu-trigger"
-              :class="expanded ? 'active' : ''"
-              id="menu03"
-            >
-              <p></p>
-              <p></p>
-              <p></p>
-            </span>
-          </template>
-        </b-navbar-toggle>
+        <div class="d-flex align-items-center">
+          <div class="smallScr">
+            <langSwitch />
+          </div>
+
+          <b-navbar-toggle target="navbar-toggle-collapse">
+            <template #default="{ expanded }">
+              <span
+                class="menu-trigger"
+                :class="expanded ? 'active' : ''"
+                id="menu03"
+              >
+                <p></p>
+                <p></p>
+                <p></p>
+              </span>
+            </template>
+          </b-navbar-toggle>
+        </div>
 
         <b-collapse
           id="navbar-toggle-collapse"
@@ -63,7 +69,9 @@
             >
               Logout
             </b-nav-item>
-            <langSwitch />
+            <div class="largeScr">
+              <langSwitch />
+            </div>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -168,7 +176,7 @@ nav {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  padding: 0;
+  padding: 5px 0;
 }
 .onScroll .navbar .nav-item .nav-link {
   color: rgb(0, 0, 0);
@@ -288,6 +296,19 @@ nav {
   margin: -4px 0 0 12px;
 }
 
+.largeScr {
+  @include md {
+    display: none;
+  }
+}
+
+.smallScr {
+  display: none;
+  @include md {
+    display: inline;
+  }
+}
+
 .navbar-nav .nav-item .nav-link:hover {
   color: var(--main-color);
 }
@@ -301,7 +322,7 @@ nav {
 @include md {
   .navbar-nav {
     background-color: #fff !important;
-    padding: 20px 0;
+    padding: 10px 0;
   }
   .navbar-nav .nav-item .nav-link {
     background-color: #fff !important;
@@ -319,9 +340,13 @@ nav {
     font-weight: 500 !important;
     box-shadow: none !important;
     border: none !important;
-    min-width: 60px !important;
+    min-width: unset !important;
+    width: 100%;
     position: relative;
     top: -3px;
+    @include md {
+      color: #000 !important;
+    }
   }
   .dropdown-menu {
     top: 40px !important;
