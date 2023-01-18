@@ -1,5 +1,5 @@
 <template>
-  <section class="why">
+  <section class="why container">
     <div class="row justify-content-center">
       <h2>Why We Are Different</h2>
     </div>
@@ -42,6 +42,7 @@
         <swiper-slide v-for="partner in partners" :key="partner.id">
           <div class="item">
             <img class="img-fluid" :src="partner.image" :alt="partner.title" />
+            <h5>{{ partner.title }}</h5>
           </div>
         </swiper-slide>
       </swiper>
@@ -56,7 +57,7 @@ export default {
   data() {
     return {
       swiperOption: {
-        loop: true,
+        // loop: true,
         slidesPerView: 6,
         spaceBetween: 50,
         breakpoints: {
@@ -92,7 +93,7 @@ export default {
 
 <style>
 .why {
-  padding: 65px 65px 35px;
+  padding: 65px 0 35px;
 }
 .why h2 {
   clear: both;
@@ -130,9 +131,12 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-
+.why .item h5 {
+  text-align: center;
+  margin-top: 10px;
+}
 .why .item img {
-  width: 100px;
+  width: 90px;
   margin: auto;
 }
 
