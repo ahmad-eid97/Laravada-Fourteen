@@ -131,10 +131,12 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
+
 .why .item h5 {
   text-align: center;
   margin-top: 10px;
 }
+
 .why .item img {
   width: 90px;
   margin: auto;

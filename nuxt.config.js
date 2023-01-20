@@ -36,6 +36,7 @@ export default {
     "~plugins/fortawesome.js",
     "~plugins/vueCountDown.js",
     "~plugins/swiperVue.js",
+    "~plugins/vueToastify.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

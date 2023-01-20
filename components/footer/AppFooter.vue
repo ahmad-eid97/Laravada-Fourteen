@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <subscribe />
     <div class="copyrights">
       <p>© Rail Coder 2022-2023. All rights reserved.</p>
       <div class="inline">
@@ -17,9 +18,10 @@
 </template>
 
 <script>
+import Subscribe from "../subscribe/subscribe.vue";
 export default {
   name: "AppFooter",
-  components: {},
+  components: { Subscribe },
   data() {
     return {};
   },
