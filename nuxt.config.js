@@ -37,6 +37,7 @@ export default {
     "~plugins/vueCountDown.js",
     "~plugins/swiperVue.js",
     "~plugins/vueToastify.js",
+    "~plugins/socialChat.js",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
