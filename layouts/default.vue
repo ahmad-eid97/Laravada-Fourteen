@@ -2,26 +2,23 @@
   <div id="app" :class="$i18n.locale === 'en' ? 'english' : 'arabic'">
     <app-header></app-header>
     <router-view />
-    <app-footer ></app-footer>
+    <app-footer></app-footer>
   </div>
 </template>
 
-
 <script>
-import AppHeader from '../components/header/AppHeader.vue'
-import AppFooter from '../components/footer/AppFooter.vue'
+import AppHeader from "../components/header/AppHeader.vue";
+import AppFooter from "../components/footer/AppFooter.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     AppHeader,
-    AppFooter
+    AppFooter,
   },
-  watch: {
-  },
+  watch: {},
 
-
-  created () {
+  created() {
     // this.$route.params.lang = localStorage.getItem('code');
     // if (this.$route.params.lang === 'ar') {
     //   localStorage.setItem('code', 'ar');
@@ -38,9 +35,26 @@ export default {
     // }
   },
   mounted() {
-        // this.$route.params.lang  = this.lang;
-  }
-}
+    // this.$route.params.lang  = this.lang;
+
+    document
+      .querySelector(":root")
+      .style.setProperty(
+        "--main-color",
+        this.$store.state.websiteSettings.find(
+          (one) => one.key === "primary_color"
+        ).plain_value
+      );
+
+    document
+      .querySelector(":root")
+      .style.setProperty(
+        "--second-color",
+        this.$store.state.websiteSettings.find(
+          (one) => one.key === "secondary_color"
+        ).plain_value
+      );
+  },
+};
 </script>
-<style>
-</style>
+<style></style>

@@ -92,9 +92,9 @@ export default {
 .intro h1 {
   color: rgb(255, 255, 255);
   font-family: "Oswald", sans-serif;
-  font-size: 154px;
+  font-size: 100px;
   font-weight: 700;
-  height: 160px;
+  /* height: 160px; */
   line-height: 160px;
   position: relative;
   z-index: 2;
@@ -104,7 +104,7 @@ export default {
   font-family: "Oswald", sans-serif;
   font-size: 154px;
   font-weight: 300;
-  height: 160px;
+  /* height: 160px; */
   line-height: 160px;
   opacity: 1;
   position: relative;
@@ -115,7 +115,7 @@ export default {
   font-family: "Oswald";
   font-size: 154px;
   font-weight: 300;
-  height: 160px;
+  /* height: 160px; */
   line-height: 160px;
   position: relative;
   z-index: 2;
@@ -125,7 +125,7 @@ export default {
   font-family: "Roboto";
   font-size: 33px;
   font-weight: 400;
-  height: 100px;
+  /* height: 100px; */
   line-height: 42px;
   color: rgb(255, 255, 255);
   position: relative;
@@ -140,7 +140,7 @@ export default {
   .intro h1 {
     font-size: 64px;
     line-height: 70px;
-    height: 80px;
+    /* height: 80px; */
   }
   .intro h1 span {
     font-size: 64px;
