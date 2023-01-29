@@ -6,11 +6,20 @@
       <div class="inline">
         <span class="mx-2">
           <font-awesome-icon icon="fa-solid fa-envelope" />
-          info@railcoder.com
+
+          {{
+            $store.state.websiteSettings.find((one) => one.key === "email")
+              .plain_value
+          }}
         </span>
         <p class="mx-2">
           <font-awesome-icon icon="fa-solid fa-square-phone" />
-          +1111111111111
+
+          {{
+            $store.state.websiteSettings.find(
+              (one) => one.key === "contact_phone"
+            ).plain_value
+          }}
         </p>
       </div>
     </div>
