@@ -3,18 +3,22 @@
     <app-header></app-header>
     <router-view />
     <app-footer></app-footer>
+
+    <popup />
   </div>
 </template>
 
 <script>
 import AppHeader from "../components/header/AppHeader.vue";
 import AppFooter from "../components/footer/AppFooter.vue";
+import popup from "../components/popup/Popup.vue";
 
 export default {
   name: "App",
   components: {
     AppHeader,
     AppFooter,
+    popup,
   },
   watch: {},
 

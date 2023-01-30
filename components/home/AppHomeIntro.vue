@@ -20,11 +20,16 @@
           <div class="col-auto phone">
             <h3>
               <font-awesome-icon icon="fa-solid fa-square-phone" />
-              +1 (001) 987 65 43
+
+              {{
+                $store.state.websiteSettings.find(
+                  (one) => one.key === "contact_phone"
+                ).plain_value
+              }}
             </h3>
             <p>
               We are ready to start a project of any complexity.
-              <a href="#">Call us now!</a>
+              <nuxt-link to="/contact">Call us now!</nuxt-link>
             </p>
           </div>
         </div>
