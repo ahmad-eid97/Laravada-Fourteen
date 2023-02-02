@@ -5,8 +5,12 @@
     <app-home-numbers></app-home-numbers>
     <app-home-why :partners="partners"></app-home-why>
     <app-home-consult></app-home-consult>
-    <app-home-activities :activities="activities" />
-    <app-home-steps :steps="steps" />
+    <div v-if="activities.status">
+      <app-home-activities :activities="activities.data" />
+    </div>
+    <div v-if="steps.status">
+      <app-home-steps :steps="steps.data" />
+    </div>
     <app-home-team :teams="teams"></app-home-team>
     <app-home-contact></app-home-contact>
     <SocialChat :attendants="attendants">
@@ -127,8 +131,8 @@ export default {
       slides: slides.data.data.sliders,
       teams: teams.data.data.teams,
       partners: partners.data.data.partners,
-      activities: activities.data.data,
-      steps: steps.data.data,
+      activities: activities.data,
+      steps: steps.data,
     };
   },
 };
